@@ -1,10 +1,13 @@
 # Symbol Vanity Address Generator
 
-This is an *experimental* tool for generating Vanity addresses for the [Symbol blockchain](https://symbolplatform.com).
+This is an **experimental** tool for generating Vanity addresses for the [Symbol blockchain](https://symbolplatform.com).
 You provide it with a string of characters that should be present in the address, and the script will look for such an address and return its secret key..
 
-Don't trust this tool blindly. When you have the address and private key, import the secret key in the symbol wallet, and make a backup form the wallet.
+Don't trust this tool blindly. When you have the address and secret key, import the secret key in the symbol wallet, and make a backup from the wallet.
 
+# TLDR
+
+`docker run --rm -it --network none rb2nem/vanitysymbol`
 
 # About Symbol addresses
 
@@ -29,7 +32,20 @@ looking for. We will want to match address having the 3 characters `XYM`:
 
 You can call this script without argument, and you will then be prompted for the search pattern.
 Alternatively, you can pass your search string as argument to the string, enclosed in single quotes,
-like this: `.*XYM`.
+like this: `'.*XYM'`.
+
+You can download the docker image with
+```
+docker pull rb2nem/vanitysymbol
+```
+
+From that point, you can go offline for maximum security. To actually run the script, issue the command
+`docker run --rm -it --network none rb2nem/vanitysymbol`
+
+It will start a docker container and prompt you for the search pattern.
+You can also provide the search pattern as an argument:
+
+`docker run --rm -it --network none rb2nem/vanitysymbol '.*XY.$'`
 
 # Strength of private keys
 
