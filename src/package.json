@@ -1,0 +1,18 @@
+{
+    "name": "vanitysymbol",
+    "version": "0.0.1",
+    "description": "symbol address generator",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc index.ts && node index.js ",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^14.14.7",
+        "prompt-sync": "^4.2.0",
+        "rxjs": "^6.6.3",
+        "symbol-sdk": "^0.20.7"
+    }
+}
