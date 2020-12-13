@@ -1,6 +1,6 @@
 # Symbol Vanity Address Generator
 
-This is an **experimental** tool for generating Vanity addresses for the [Symbol blockchain](https://symbolplatform.com).
+This is an **experimental** tool for generating Vanity addresses for the [Symbol blockchain](https://symbolplatform.com) TEST_NET.
 You provide it with a string of characters that should be present in the address, and the script will look for such an address and return its secret key..
 
 Don't trust this tool blindly. When you have the address and secret key, import the secret key in the symbol wallet, and make a backup from the wallet.

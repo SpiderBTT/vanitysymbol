@@ -21,7 +21,7 @@ function search(regex: RegExp, alreadyTried: number) {
         var random= stdout.trim();
         while (random.length - startIndex >= 64) {
             var key = random.substr(startIndex, 64)
-            var account=Account.createFromPrivateKey(key, NetworkType.MAIN_NET);
+            var account=Account.createFromPrivateKey(key, NetworkType.TEST_NET);
             var plain = account.address.plain();
             if (regex.test(plain)) {
                 console.log("MATCH FOUND!")
